@@ -1,5 +1,7 @@
 # pq-signatures-demo: hybrid Ed25519 + ML-DSA-65 signatures, checked against NIST's vectors
 
+[![CI](https://github.com/codenlighten/pq-signatures-demo/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/codenlighten/pq-signatures-demo/actions/workflows/ci.yml)
+
 A small Rust signing component that signs every message twice, with Ed25519 and with the post-quantum algorithm ML-DSA-65 (FIPS 204), and accepts it only if **both** signatures verify. Both algorithms come from **third-party libraries**; nothing cryptographic is implemented here. **It is a demonstration and has not been audited.**
 
 The work shown is the part around the libraries, where hybrid schemes tend to go wrong: making sure a half cannot be dropped, moved to another key or reused elsewhere, pinning down which inputs are accepted, and saying precisely what the combination does and does not guarantee.
