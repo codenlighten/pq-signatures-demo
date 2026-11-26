@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Builds vectors/mldsa65.json from NIST's ACVP files. Standard library only.
+"""Builds third_party/nist-acvp/mldsa65.json from NIST's ACVP files. Standard library only.
 
     python3 -I tools/filter_vectors.py DIR_WITH_THE_SIX_FILES COMMIT OUTPUT
 

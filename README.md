@@ -45,7 +45,7 @@ Ed25519 points (the public key and `R`) must be canonically encoded, in the prim
 
 ### NIST test vectors, two libraries
 
-The component signs with [`fips204`](https://crates.io/crates/fips204). A second, independently written library, RustCrypto's [`ml-dsa`](https://crates.io/crates/ml-dsa), is used **only in tests** as a second opinion. Both are run against NIST's ACVP vectors for ML-DSA-65 ([provenance and NIST's notice](vectors/NOTICE.md)):
+The component signs with [`fips204`](https://crates.io/crates/fips204). A second, independently written library, RustCrypto's [`ml-dsa`](https://crates.io/crates/ml-dsa), is used **only in tests** as a second opinion. Both are run against NIST's ACVP vectors for ML-DSA-65 ([provenance and NIST's notice](third_party/nist-acvp/NOTICE.md)):
 
 | NIST vectors (external, pure interface) | Cases | `fips204` | `ml-dsa` |
 |---|---|---|---|
@@ -128,4 +128,4 @@ CI runs `cargo audit` against the dependency tree on every push.
 
 ## Licence
 
-MIT, see `LICENSE`. `vectors/mldsa65.json` is NIST's data under NIST's notice, not under this licence.
+MIT, see `LICENSE`. `third_party/nist-acvp/mldsa65.json` is NIST's data under NIST's notice, not under this licence.
