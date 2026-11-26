@@ -7,7 +7,8 @@ use ml_dsa::MlDsa65;
 use serde_json::Value;
 
 fn cases(mode: &str, expected: usize) -> Vec<Value> {
-    let all: Value = serde_json::from_str(include_str!("../third_party/nist-acvp/mldsa65.json")).unwrap();
+    let all: Value =
+        serde_json::from_str(include_str!("../third_party/nist-acvp/mldsa65.json")).unwrap();
     let cases = all[mode].as_array().unwrap().clone();
     // Exact counts: a filter that silently kept nothing must not look like a pass.
     assert_eq!(cases.len(), expected, "{mode}");
