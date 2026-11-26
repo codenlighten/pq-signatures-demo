@@ -290,7 +290,10 @@ mod tests {
 
     #[test]
     fn a_new_key_has_two_independent_seeds() {
-        let (a, b) = (SecretKey::generate().unwrap(), SecretKey::generate().unwrap());
+        let (a, b) = (
+            SecretKey::generate().unwrap(),
+            SecretKey::generate().unwrap(),
+        );
         assert_ne!(*a.ed_seed, *a.ml_seed, "one seed used for both algorithms");
         assert_ne!(*a.ed_seed, *b.ed_seed);
         assert_ne!(*a.ml_seed, *b.ml_seed);
