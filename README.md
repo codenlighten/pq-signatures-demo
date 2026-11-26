@@ -31,7 +31,7 @@ The full specification is [SPEC.md](SPEC.md). In short, both algorithms sign
 
 Ed25519 points (the public key and `R`) must be canonically encoded, in the prime-order subgroup and not the identity: stricter than the library's "strict" mode, which accepts points that merely have a small-order component. ML-DSA signing is randomised; if the system's random generator fails, nothing is signed.
 
-## What it gives, and what it does not
+## Limits: what it gives, and what it does not
 
 - A forger needs both algorithms: assuming independent keys and that **at least one** of them remains existentially unforgeable, signatures on new messages cannot be forged.
 - **Strong unforgeability is not promised.** Whoever holds one of the two component keys can produce a second valid signature for a message that was already signed. A test does exactly that.
